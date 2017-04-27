@@ -58,6 +58,12 @@
         this.selectTab = function(setTab) {
             this.tab = setTab;
         }
+
+        this.isSelected = function(checkTab) {
+            return this.tab === checkTab;
+            /*Con 3 iguales siempre se compara el elemtento*/
+        }
+
     });
 
 })();
