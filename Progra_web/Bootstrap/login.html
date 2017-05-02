@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Work</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/1c71a85b04.js"></script>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Acordarse de usar nav-header para probar -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    Menu
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="public/img/index.png" alt="bootstrap.png" width="23px" height="auto">
+                </a>
+                <a href="index.html" class="navbar-brand brand">
+                    MultiPlay
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <p class="navbar-text">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> Sign In / Sign Up</p>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Sign In/Sign Up <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Sign In</a>
+                            </li>
+                            <li>
+                                <li role="separator" class="divider"></li>
+                            </li>
+                            <li>
+                                <a href="#">Sign Up</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-music" aria-hidden="true"></i> Music</a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="Login" class="container degradado container-fluid sections text-center">
+        <div class="row">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="secondary active"><a href="#signIn" data-toggle="tab">Sign In</a></li>
+                <li class="secondary"><a href="#signUp" data-toggle="tab">Sign Up</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="signIn" class="tab-pane fade in active">
+                    <div class="form-group">
+                        <h2>Email / Username</h2>
+                        <input type="text" class="form-control" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <h2>Password</h2>
+                        <input type="password" class="form-control" placeholder="Your password here">
+                    </div>
+                    <button class="btn btn-default">Sign In</button>
+                </div>
+                <div id="signUp" class="tab-pane fade">
+                    <div class="form-group">
+                        <h2>Full Name</h2>
+                        <input type="text" class="form-control" placeholder="Someone Else Here">
+                    </div>
+                    <div class="form-group">
+                        <h2>Phone Number</h2>
+                        <input type="text" class="form-control" placeholder="555-55-55">
+                    </div>
+                    <div class="form-group">
+                        <h2>Email / Username</h2>
+                        <input type="text" class="form-control" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <h2>Password</h2>
+                        <input type="password" class="form-control" placeholder="Your password here">
+                    </div>
+                    <button class="btn btn-default">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

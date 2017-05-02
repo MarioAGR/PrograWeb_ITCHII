@@ -4,43 +4,216 @@
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap Work</title>
-    <link rel="stylesheet" href="css/custom.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/1c71a85b04.js"></script>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-inverse">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <!-- Acordarse de usar nav-header para probar -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    Menu
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
-                <a href="#" class="navbar-brand">Brand</a>
+                <a href="index.html" class="navbar-brand">
+                    <img src="public/img/index.png" alt="bootstrap.png" width="23px" height="auto">
+                </a>
+                <a href="index.html" class="navbar-brand brand">
+                    MultiPlay
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <p class="navbar-text">
+                    <i class="fa fa-music" aria-hidden="true"></i> Music</p>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li>
+                        <a href="shop.html">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> Shop</a>
+                    </li>
+                    <li class="active"><a href="#section1">New releases <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#section2">Popular now</a></li>
+                    <li><a href="#section3">Classics</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						Dropdown <span class="caret"></span>
-					</a>
+                        Sign In/Sign Up <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="login.html">Sign In</a>
+                            </li>
+                            <li>
+                                <li role="separator" class="divider"></li>
+                            </li>
+                            <li>
+                                <a href="login.html">Sign Up</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button class="btn btn-default">Submit</button>
+                </form>
             </div>
         </div>
     </nav>
-    <div class="degradado container-fluid text-center">
-        <h1>Ejemplo</h1>
+    <div id="section1" class="degradado container-fluid text-center sections">
+        <div class="jumbotron">
+            <h1 class="text-uppercase">New releases</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="https://hiphopdx-production.s3.amazonaws.com/2017/03/Gorillaz-Humanz-album-cover-art.jpg" alt="Humanz - Gorillaz">
+                    <div class="caption">
+                        <h3>Humanz</h3>
+                        <h4>Gorillaz</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://i.telehit.com/2017/04/one-republic.jpg" alt="No Vacancy - OneRepublic">
+                    <div class="caption">
+                        <h3>No Vacancy</h3>
+                        <h4>OneRepublic</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://www.guettapen.com/wp-content/uploads/2017/04/tiesto-sevenn-boom.jpg">
+                    <div class="caption">
+                        <h3>BOOM</h3>
+                        <h4>Tiësto, Sevenn</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://rollingstone.uol.com.br/media/images/large/2017/04/28/img-1043428-iii-foster-people.jpg">
+                    <div class="caption">
+                        <h3>III</h3>
+                        <h4>Foster The People</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section2" class="degradado container-fluid text-center sections">
+        <div class="jumbotron">
+            <h1 class="text-uppercase">Popular now</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://elgenero.com.co/wp-content/uploads/2017/04/Daddy-Yankee-Despacito-Remix.jpg">
+                    <div class="caption">
+                        <h3>Despacito - Remix</h3>
+                        <h4>Luis Fonsi, Daddy Yankee, Justin Bieber</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://www.flashbackmagazin.de/wp-content/2017/01/ed-sheeran-shape-of-you-cover.png">
+                    <div class="caption">
+                        <h3>Shape of you</h3>
+                        <h4>Ed Sheeran</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://ringchart.ru/wp-content/uploads/2017/04/%D1%80%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD-Kendrick-Lamar-HUMBLE.jpg">
+                    <div class="caption">
+                        <h3>H.U.M.B.L.E.</h3>
+                        <h4>Kendrick Lamar</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="https://cbsradionews.files.wordpress.com/2017/02/chainsmokers-coldplay-arty.jpg?w=555">
+                    <div class="caption">
+                        <h3>Something Just Like This</h3>
+                        <h4>The Chainsmokers & Coldplay</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section3" class="degradado container-fluid text-center sections">
+        <div class="jumbotron">
+            <h1 class="text-uppercase">Classics</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://cdn.mos.musicradar.com/images/features/metal-week/iron-maiden-artwork/run-to-the-hills-single-630-80.jpg">
+                    <div class="caption">
+                        <h3>Run To The Hills</h3>
+                        <h4>Iron Maiden</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://media-cache-ec0.pinimg.com/736x/1b/3d/55/1b3d55017ec55eadc24ea58e643ddc2c.jpg">
+                    <div class="caption">
+                        <h3>La Grange</h3>
+                        <h4>ZZ Top</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="https://img.discogs.com/L8a9Aw_7LlPqksooC1mrRx55oyU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7239927-1447972777-5532.jpeg.jpg">
+                    <div class="caption">
+                        <h3>Rock and Roll All nite</h3>
+                        <h4>Kiss</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbnail">
+                    <img src="http://images.45cat.com/guns-n-roses-welcome-to-the-jungle-geffen.jpg">
+                    <div class="caption">
+                        <h3>Welcome To The Jungle</h3>
+                        <h4>Guns N' Roses</h4>
+                        <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

@@ -1,16 +1,84 @@
 html,
 body {
     height: 100%;
-    background: -webkit-linear-gradient(left, red, blue);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, red, blue);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, red, blue);
-    /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, purple, cyan);
     /* Standard syntax */
+    font-family: 'Roboto';
 }
 
 .degradado {
-	color: white;
+    color: white;
+}
+
+.brand {
+    margin-top: 0.40%;
+}
+
+.navbar {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.sections {
+    padding-top: 5%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .sections {
+        padding-top: 10%;
+        height: 100%;
+    }
+    #section3 {
+        height: 110%;
+    }
+    .jumbotron {
+        margin-top: -5%;
+    }
+}
+
+@media (min-height: 768px) and (max-width: 991px) {
+    #section3 {
+        height: 110%;
+    }
+}
+
+#section2 {
+    background: linear-gradient(to bottom left, cyan, purple);
+    /* Standard syntax */
+}
+
+#section3 {
+    background: linear-gradient(to bottom right, purple, cyan);
+    /* Standard syntax */
+    transition:
+}
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: inherit;
+    color: inherit;
+    background-color: inherit;
+}
+
+.thumbnail .caption {
+    padding: inherit;
+    color: #333;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#Login {
+    width: 75%;
+}
+
+.secondary {
+    background: #b9b9b9;
+    border-radius: 3px;
 }
