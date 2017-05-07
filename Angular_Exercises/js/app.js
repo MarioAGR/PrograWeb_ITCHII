@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('BookStoreApp', []);
+    var app = angular.module('BookStoreApp', ['ui.router']);
 
     // var booksList = [{
     //     id: 1,
@@ -25,10 +25,40 @@
     // }]
 
     app.controller('BooksController', function($scope, $http) {
-        $http.get('public/data.json')
+        $http.get('data/data.json')
             .then(function(res) {
                 $scope.booksData = res.data;
             });
+    });
+
+    app.config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/list')
+
+        $stateProvider
+            .state('home', {
+                url: '/list',
+                templateUrl: 'list.html'
+            })
+            .state('bookPage', {
+                url: '/book',
+                template: '<h1>Book Page</h1>'
+            })
+
+        /*var indexState = {
+            name:'index',
+            url: '/list',
+            templateUrl: 'index.html'
+        }*/
+
+        /*var pruebaState = {
+            name: 'pruebas',
+            url: '/prueba',
+            template: '<h1>Pruebas</h1>'
+        }
+
+        $stateProvider.state(indexState);
+        $stateProvider.state(pruebaState);*/
     });
 
     // app.controller('pruebasController', function() {
