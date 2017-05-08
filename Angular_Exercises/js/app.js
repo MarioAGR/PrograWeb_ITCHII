@@ -27,8 +27,6 @@
         }
     });
 
-    
-
     app.config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/list');
@@ -42,7 +40,7 @@
             .state('bookTab', {
                 url: '/book',
                 templateUrl: 'tab.html',
-                controller: 'BookSheetController as bookPage'
+                controller: 'BooksController'
             });
     });    
 

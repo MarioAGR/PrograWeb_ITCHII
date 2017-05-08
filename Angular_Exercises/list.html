@@ -18,7 +18,10 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="book in booksData | filter: booksFilter:strict | orderBy: sortBooks">
         <div class="media">
-            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage" ui-sref="bookTab">
+            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage">
+                <a ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)">
+                    <button class="btn">Guardar datos</button>
+                </a>
                 <p>{{bookPage.bookId}}</p>
                 <p>{{bookPage.title}}</p>
                 <p>{{bookPage.author}}</p>
@@ -26,7 +29,7 @@
                 <p>{{bookPage.description}}</p>
                 <p>{{bookPage.img}}</p>
                 <a href="#">
-                    <img ng-src="{{ book.img }}" class="media-object" width="125px" height="auto" ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)"/>
+                    <img ng-src="{{ book.img }}" class="media-object" width="125px" height="auto" ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)" ui-sref="bookTab" />
                 </a>
                 <p>{{book.id}}</p>
             </div>
