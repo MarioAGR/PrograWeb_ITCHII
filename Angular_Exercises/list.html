@@ -18,7 +18,7 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="book in booksData | filter: booksFilter:strict | orderBy: sortBooks">
         <div class="media">
-            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage">
+            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage" ui-sref="bookTab">
                 <p>{{bookPage.bookId}}</p>
                 <p>{{bookPage.title}}</p>
                 <p>{{bookPage.author}}</p>
@@ -40,6 +40,3 @@
         </div>
     </li>
 </ul>
-
-<a ui-sref="bookTab">Redir</a>
-<ui-view></ui-view>

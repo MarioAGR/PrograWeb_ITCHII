@@ -8,6 +8,27 @@
             });
     });
 
+    app.controller('BookSheetController', function() {
+
+        this.bookId = '';
+        this.title = '';
+        this.author = '';
+        this.editorial = '';
+        this.description = '';
+        this.img = '';
+
+        this.saveData = function(bookId,title,author,editorial,description,img) {
+            this.bookId = bookId;
+            this.title = title;
+            this.author = author;
+            this.editorial = editorial;
+            this.description = description;
+            this.img = img;
+        }
+    });
+
+    
+
     app.config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/list');
@@ -21,32 +42,8 @@
             .state('bookTab', {
                 url: '/book',
                 templateUrl: 'tab.html',
-                controller: 'BookSheetController',
-                controllerAs: 'bookPage'
+                controller: 'BookSheetController as bookPage'
             });
-    });
-
-    app.controller('BookSheetController', function() {
-
-        this.bookId = '';
-        this.title = '';
-        this.author = '';
-        this.editorial = '';
-        this.description = '';
-        this.img = '';
-
-        this.selectTab = function(setBookId) {
-            this.bookId = setBookId;
-        }
-
-        this.saveData = function(bookId,title,author,editorial,description,img) {
-            this.bookId = bookId;
-            this.title = title;
-            this.author = author;
-            this.editorial = editorial;
-            this.description = description;
-            this.img = img;
-        }
-    });
+    });    
 
 })();
