@@ -14,6 +14,7 @@
         </select>
     </div>
 </form>
+<br>
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="book in booksData | filter: booksFilter:strict | orderBy: sortBooks">
         <div class="media">
@@ -26,7 +27,7 @@
                 <p>{{bookPage.img}}</p>
                 <a href="#">
                     <img ng-src="{{ book.img }}" class="media-object" width="125px" height="auto" ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)"/>
-                </a>                
+                </a>
                 <p>{{book.id}}</p>
             </div>
             <div class="media-body">
@@ -40,5 +41,5 @@
     </li>
 </ul>
 
-<a ui-sref="bookTab" ui-sref-active="active">Redir</a>
+<a ui-sref="bookTab">Redir</a>
 <ui-view></ui-view>

@@ -21,13 +21,12 @@
             .state('bookTab', {
                 url: '/book',
                 templateUrl: 'tab.html',
-                controller: 'BookSheetController'
+                controller: 'BookSheetController',
+                controllerAs: 'bookPage'
             });
     });
 
     app.controller('BookSheetController', function() {
-
-        var bookPage = this;
 
         this.bookId = '';
         this.title = '';
