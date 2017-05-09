@@ -1,4 +1,7 @@
 (function() {
+
+    "use strict";
+
     var app = angular.module('BookStoreApp', ['ui.router']);
 
     app.controller('BooksController', function($scope, $http) {
@@ -27,8 +30,6 @@
         }
     });
 
-    
-
     app.config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/list');
@@ -40,7 +41,7 @@
                 controller: 'BooksController'
             })
             .state('bookTab', {
-                url: '/book',
+                url: '/book/{id}',
                 templateUrl: 'tab.html',
                 controller: 'BookSheetController as bookPage'
             });

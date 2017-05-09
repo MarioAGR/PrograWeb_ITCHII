@@ -1,11 +1,11 @@
-<h1 class="text-center">Libros</h1>
-<form class="form-inline">
+<h1 class="text-center">Spanglish library</h1>
+<form class="form-inline text-right">
     <div class="form-group">
-        <label>Buscar:</label>
+        <label>Search:</label>
         <input class="form-control" type="text" name="filter" ng-model="booksFilter.title">
     </div>
     <div class="form-group">
-        <label>Ordenar: </label>
+        <label>Order by: </label>
         <select class="form-control" ng-model="sortBooks">
             <option value="id">ID</option>
             <option value="title">Title</option>
@@ -18,25 +18,26 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="book in booksData | filter: booksFilter:strict | orderBy: sortBooks">
         <div class="media">
-            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage" ui-sref="bookTab">
+            <div class="media-left media-middle" ng-controller="BookSheetController as bookPage">
+                <!-- <a ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)" class="btn btn-primary">Save data</a>
                 <p>{{bookPage.bookId}}</p>
                 <p>{{bookPage.title}}</p>
                 <p>{{bookPage.author}}</p>
                 <p>{{bookPage.editorial}}</p>
                 <p>{{bookPage.description}}</p>
-                <p>{{bookPage.img}}</p>
+                <p>{{bookPage.img}}</p> -->
                 <a href="#">
-                    <img ng-src="{{ book.img }}" class="media-object" width="125px" height="auto" ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)"/>
+                    <img ui-sref="bookTab({id:book.id})" ng-src="{{ book.img }}" class="media-object" width="175px" height="auto" ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)" />
                 </a>
-                <p>{{book.id}}</p>
             </div>
             <div class="media-body">
                 <!-- <mark>ID: {{ book.id }}</mark> -->
-                <h1>{{ book.title }}</h1>
-                <h2>{{ book.author }}</h2>
-                <h3>{{ book.editorial }}</h3>
+                <h2>{{ book.title }}</h2>
+                <h3>{{ book.author }}</h3>
+                <h4>{{ book.editorial }}</h4>
                 <p>{{ book.description }}</p>
             </div>
         </div>
     </li>
 </ul>
+<p class="miniP text-center">Psst! Dont write the word <mark>magic</mark> in this website...</p>
