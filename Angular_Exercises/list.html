@@ -19,7 +19,9 @@
     <li class="list-group-item" ng-repeat="book in booksData | filter: booksFilter:strict | orderBy: sortBooks">
         <div class="media">
             <div class="media-left media-middle" ng-controller="BookSheetController as bookPage">
-                <!-- <a ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)" class="btn btn-primary">Save data</a>
+                <!-- <a ng-click="bookPage.saveData(book.id,book.title,book.author,book.editorial,book.description,book.img)">
+                    <button class="btn">Guardar datos</button>
+                </a>
                 <p>{{bookPage.bookId}}</p>
                 <p>{{bookPage.title}}</p>
                 <p>{{bookPage.author}}</p>
@@ -40,4 +42,7 @@
         </div>
     </li>
 </ul>
+<<<<<<< HEAD
 <p class="miniP text-center">Psst! Dont write the word <mark>magic</mark> in this website...</p>
+=======
+>>>>>>> 95817c3fec2b0e20a285d6a534723e0b39fe70fd

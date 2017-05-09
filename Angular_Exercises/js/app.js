@@ -43,7 +43,7 @@
             .state('bookTab', {
                 url: '/book/{id}',
                 templateUrl: 'tab.html',
-                controller: 'BookSheetController as bookPage'
+                controller: 'BooksController'
             });
     });    
 
