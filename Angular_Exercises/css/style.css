@@ -1,0 +1,21 @@
+html, body {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	font-family: sans-serif;
+	height: 100%;
+}
+
+h1 {
+	color: white;
+}
+
+.fullScreen {
+	height: 100%;
+}
+
+.miniP {
+	font-size: 0.75em;
+}
+
+.media-body {
+	padding: 2.5% 3%;
+}
